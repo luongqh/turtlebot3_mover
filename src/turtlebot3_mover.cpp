@@ -90,22 +90,11 @@ private:
             latest_odom_.pose.pose.orientation.z,
             latest_odom_.pose.pose.orientation.w
         );
-        double roll, pitch, yaw;
-        tf::Matrix3x3(quat).getRPY(roll, pitch, yaw);
 
-        // Adjust position for map origin (from map.yaml, e.g., [-10, -10])
-        double map_origin_x = -10;  // Adjust based on your map.yaml
-        double map_origin_y = -10;  // Adjust based on your map.yaml
-        // x += map_origin_x;
-        // y += map_origin_y;
-
-        // Set position
+        // Set initial position
         initial_pose.pose.pose.position.x = x;
         initial_pose.pose.pose.position.y = y;
         initial_pose.pose.pose.position.z = z;
-
-        // Set orientation (yaw only for 2D)
-        //initial_pose.pose.pose.orientation = tf::createQuaternionMsgFromYaw(yaw);
         initial_pose.pose.pose.orientation.x = latest_odom_.pose.pose.orientation.x;
         initial_pose.pose.pose.orientation.y = latest_odom_.pose.pose.orientation.y;
         initial_pose.pose.pose.orientation.z = latest_odom_.pose.pose.orientation.z;

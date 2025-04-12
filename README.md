@@ -35,6 +35,7 @@ The project is a ROS package named `turtlebot3_mover`, located in a Catkin works
 - **Operating System**: Ubuntu 20.04 (Focal Fossa)
 - **ROS Distribution**: ROS Noetic Ninjemys
 - **Gazebo Version**: Gazebo 11 (compatible with ROS Noetic)
+- **Tested on Jetson Orin Nano**
 
 ### ROS Packages
 The following ROS packages are required:
@@ -82,7 +83,7 @@ The following ROS packages are required:
 ## Installation
 
 ### 1. Install ROS Noetic
-If ROS Noetic is not already installed:
+Follow [this instruction](https://wiki.ros.org/noetic/Installation/Ubuntu) to install ROS Noetic:
 
 ```bash
 sudo apt update
